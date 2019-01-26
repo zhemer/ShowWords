@@ -1,0 +1,21 @@
+ShowWords by Sergey Zhemerdeev <zhseal0@gmail.com>
+Version 0.1.2
+ShowWords is foreign word trainer wrote for myself. It sits in system tray and shows foreign word in popup from time to time.
+
+26 September 2007
+Version 0.1.2 is released
+
+* While you will be trying to open form designer will complying with dialog saying
+that "error occurred while loading the document. Uncomment string
+//namespace ShowWords { //
+in appropriate form and try again. You will see the designer. After you will complete and close designer
+comment that string back. Also, you will get an error C2653 saying
+"'ShowWords' : is not a class or namespace name". Move to line with error and replace
+System::Resources::ResourceManager *resources = new System::Resources::ResourceManager(__typeof(ShowWords::FormMain));
+with
+System::Resources::ResourceManager *resources = new System::Resources::ResourceManager(__typeof(FormMain));
+
+TODO list:
+* Comment the code
+* Change log
+* Documentation
